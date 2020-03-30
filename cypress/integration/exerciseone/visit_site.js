@@ -14,9 +14,7 @@ describe('test_name', function() {
     }).then(($input) => {
         //edit the input value
         const [dom] = ($input).get();
-        
-        //dom.querySelector('.slds-input').type('datatable');
-        ($input).get('input[placeholder="Quick Find"]').type('datatable');
+        dom.value='datatable';
         //assert the text type
         expect($input).to.have.value('datatable');
     });
