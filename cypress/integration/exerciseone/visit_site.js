@@ -8,6 +8,7 @@ describe('test_name', function() {
     
     cy.visit('https://developer.salesforce.com/docs/component-library/overview/components');
 
+    //typing on search element
     cy.contains('Quick Find').find('.slds-input').type('datatable', {force: true} );
     
     cy.contains('Quick Find').find('.slds-input').should( ($input) => {
