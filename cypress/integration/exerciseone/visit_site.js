@@ -26,7 +26,10 @@ describe('Automation Project for Salesforce LightwebComponents', function() {
     cy.get('lightning-tab-bar').should('be.visible').then(() => {
         cy.get('componentreference-playground-example').should('be.visible').then(() => {
             cy.get('div').find('.slds-combobox__form-element').should('be.visible').then(() => {
+                //Open the Dropdown Menu
                 cy.get('div').find('.slds-combobox__form-element').click({force: true});
+                //Select “Datatable from Inline Edit” from the dropdown
+                cy.contains('Data Table with Inline Edit').find('.slds-truncate').contains('Data Table with Inline Edit').click({force: true});
             });
         });
     });
