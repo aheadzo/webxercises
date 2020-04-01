@@ -9,7 +9,10 @@ describe('Automation Project for Salesforce LightwebComponents', function() {
     
     
     //Switch to the Component Reference tab
-    cy.contains('Component Reference').find('.slds-truncate').contains('Component Reference').click({force: true});
+    //cy.contains('Component Reference').find('.slds-truncate').contains('Component Reference').click({force: true});
+    cy.get('componentreference-header').should('be.visible').then( e => {
+        cy.contains('Component Reference').find('.slds-truncate').contains('Component Reference').click({force: true})
+    });
 
     //Search in Quick Find for “datatable” 
     cy.contains('Quick Find').find('.slds-input').type('datatable', {force: true} );
