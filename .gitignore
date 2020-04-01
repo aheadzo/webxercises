@@ -1,0 +1,6 @@
+cypress/screenshots/All Specs/my-image.png
+cypress/screenshots/exerciseone/alter_visit.js/test_name -- what_it_does (failed).png
+cypress/screenshots/exerciseone/visit_site.js/Type on search element and click to display datatable information -- Click, type and search, then display (failed).png
+cypress/screenshots/All Specs/my-image.png
+cypress/videos/exerciseone/alter_visit.js.mp4
+cypress/videos/exerciseone/visit_site.js.mp4
