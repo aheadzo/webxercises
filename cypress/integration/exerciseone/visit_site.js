@@ -22,24 +22,15 @@ describe('Automation Project for Salesforce LightwebComponents', function() {
     //Under Lightning Web Components, click on the Components>lightning>“datatable” on the left menu panel
     cy.get('componentreference-sidebar').contains('datatable').find('.slds-truncate').contains('datatable').click({force: true});
 
-    //select Datatable from Inline Edit for the dropdown
-     
+    //Select Datatable from Inline Edit for the dropdown
+    cy.get('lightning-tab-bar').should('be.visible').then(() => {
+        cy.get('componentreference-playground-example').should('be.visible').then(() => {
+            cy.get('div').find('.slds-combobox__form-element').should('be.visible').then(() => {
+                cy.get('div').find('.slds-combobox__form-element').click({force: true});
+            });
+        });
+    });
+
  });
 
 });
-
-/*describe('test_name', function() {
-
-    it('what_it_does', function() {
-   
-       cy.viewport(1031, 731)
-    
-       cy.visit('https://developer.salesforce.com/docs/component-library/bundle/lightning-datatable/example')
-    
-       cy.get('.slds-form-element__control > .slds-combobox_container > .slds-combobox > .slds-combobox__form-element > #input-887').click()
-    
-       cy.get('.slds-combobox_container > .slds-combobox > #dropdown-element-887 > #input-887-3-887 > .slds-media__body').click()
-    
-    })
-   
-   })*/
